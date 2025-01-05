@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printable Page</title>
+  <style>
+    /* Styling dasar */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    /* Kontainer utama */
+    .print-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Judul halaman */
+    .print-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Tabel */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+
+    table th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    /* Tombol Print */
+    .print-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .print-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Styling khusus untuk mode print */
+    @media print {
+      body {
+        background: none;
+      }
+
+      .print-btn {
+        display: none;
+      }
+
+      .print-container {
+        box-shadow: none;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-container">
+    <div class="print-title">Printable Document</div>
+    <p>
+      This document is designed to be printed. Below is a sample table for demonstration purposes.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>Manager</td>
+          <td>Sales</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>Developer</td>
+          <td>IT</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Sam Wilson</td>
+          <td>Designer</td>
+          <td>Marketing</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="print-btn" onclick="window.print()">Print</button>
+  </div>
+</body>
+</html>

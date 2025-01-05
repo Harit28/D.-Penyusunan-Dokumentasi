@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPP Payment</title>
+  <style>
+    /* Styling dasar */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Kontainer utama */
+    .spp-container {
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Judul halaman */
+    .spp-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    /* Label */
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    /* Input dan select */
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input:focus, select:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Tombol aksi */
+    .action-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .action-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .action-btn:active {
+      background-color: #003f7f;
+    }
+
+    /* Footer */
+    .spp-footer {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="spp-container">
+    <div class="spp-title">SPP Payment Form</div>
+    <form action="/submit-spp" method="POST">
+      <label for="student-name">Student Name</label>
+      <input type="text" id="student-name" name="student_name" placeholder="Enter student name" required>
+
+      <label for="student-id">Student ID</label>
+      <input type="text" id="student-id" name="student_id" placeholder="Enter student ID" required>
+
+      <label for="class">Class</label>
+      <select id="class" name="class" required>
+        <option value="">Select Class</option>
+        <option value="10-A">10-A</option>
+        <option value="10-B">10-B</option>
+        <option value="11-A">11-A</option>
+        <option value="11-B">11-B</option>
+        <option value="12-A">12-A</option>
+        <option value="12-B">12-B</option>
+      </select>
+
+      <label for="month">Payment Month</label>
+      <select id="month" name="month" required>
+        <option value="">Select Month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+
+      <label for="amount">Amount (IDR)</label>
+      <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+      <button type="submit" class="action-btn">Submit Payment</button>
+    </form>
+    <div class="spp-footer">
+      &copy; 2025 School Payment System. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
